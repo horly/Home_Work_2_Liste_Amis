@@ -107,11 +107,11 @@ public class Personne
 
     public void AmisEtranger()
     {
-        // Je suis de nationalité Congolaise juste une supposition, effectivement je suis un Congolais
+        // les amis qui ne sont pas algériens 
         System.out.println("Ma Liste d'amis étrangers : ");
         System.out.println("--------------------------");
         for (int i = 0; i < this.Amis.size(); i++) {
-            if(Amis.get(i).getNationalite() != "Congolaise")
+            if(Amis.get(i).getNationalite() != "Agérien" || Amis.get(i).getNationalite() != "Agérienne")
             {
                 System.out.println("* " + Amis.get(i).getNom() + " " + Amis.get(i).getPrenom() +
                         " de nationalité "+ Amis.get(i).getNationalite() + " agé(e) de " + Amis.get(i).getAge() + " ans");
@@ -129,38 +129,38 @@ public class Personne
         Personne F = new Personne("Franc","Dubosc","Française",20);
         Personne G = new Personne("Amed","Sila","Française",20);
 
-        //On a ajoute les amis
-        System.out.println("Andelo Mata à ajouté 6 amis ");
-        A.AjoutAmis(B);
-        A.AjoutAmis(C);
-        A.AjoutAmis(D);
-        A.AjoutAmis(E);
-        A.AjoutAmis(F);
-        A.AjoutAmis(G);
+      //On a ajoute les amis
+        System.out.println( B.getNom() + "a  ajouté 6 amis ");
+        B.AjoutAmis(A);
+        B.AjoutAmis(C);
+        B.AjoutAmis(D);
+        B.AjoutAmis(E);
+        B.AjoutAmis(F);
+        B.AjoutAmis(G);
 
         //affiche la liste de tous les amis ajourés
-        System.out.println("La liste de tous les amis de Monsieur Andelo Mata Horly : ");
-        A.AffichListAmis();
+        System.out.println("La liste de tous les amis de " + B.getNom() + " : ");
+        B.AffichListAmis();
 
         //affiche la liste des amis étrangers
         System.out.println("----------------------------------------------------------");
-        System.out.println("\nLa liste des Amis étrangers de Monsieur Andelo : ");
-        A.AmisEtranger();
+        System.out.println("\nLa liste des Amis étrangers de +" + B.getNom() + " : ");
+        B.AmisEtranger();
         //
         System.out.println("----------------------------------------------------------");
 
         //on retire deux amis
-        System.out.println("\nAndelo Mata à retiré 2 amis ");
-        A.SuppAmis(G);
-        A.SuppAmis(F);
+        System.out.println(B.getNom() + " a retiré 2 amis ");
+        B.SuppAmis(G);
+        B.SuppAmis(C);
 
         //on a affiche toute la liste après suppression
-        System.out.println("\nLa liste de tous les amis de Monsieur Andelo Mata Horly : ");
-        A.AffichListAmis();
+        System.out.println("La liste de tous les amis de " + B.getNom() + " : ");
+        B.AffichListAmis();
 
         //on affiche la liste des amis étrangers après suppressionb
         System.out.println("----------------------------------------------------------");
-        System.out.println("\nLa liste des Amis étrangers de Monsieur Andelo : ");
-        A.AmisEtranger();
+        System.out.println("\nLa liste des Amis étrangers de " + B.getNom() + " : ");
+        B.AmisEtranger();
     }
 }
