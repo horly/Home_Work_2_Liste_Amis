@@ -129,8 +129,8 @@ public class Personne
         Personne F = new Personne("Franc","Dubosc","Française",20);
         Personne G = new Personne("Amed","Sila","Française",20);
 
-      //On a ajoute les amis
-        System.out.println( B.getNom() + "a  ajouté 6 amis ");
+       //On a ajoute les amis
+        System.out.println(B.getNom() + " " + B.getPrenom() +  " a  ajouté 6 amis ");
         B.AjoutAmis(A);
         B.AjoutAmis(C);
         B.AjoutAmis(D);
@@ -139,28 +139,28 @@ public class Personne
         B.AjoutAmis(G);
 
         //affiche la liste de tous les amis ajourés
-        System.out.println("La liste de tous les amis de " + B.getNom() + " : ");
+        System.out.println("La liste de tous les amis de " + B.getNom() + " " + B.getPrenom() + " : ");
         B.AffichListAmis();
 
         //affiche la liste des amis étrangers
         System.out.println("----------------------------------------------------------");
-        System.out.println("\nLa liste des Amis étrangers de +" + B.getNom() + " : ");
+        System.out.println("\nLa liste des Amis étrangers de " + B.getNom() + " " + B.getPrenom() + " : ");
         B.AmisEtranger();
         //
         System.out.println("----------------------------------------------------------");
 
         //on retire deux amis
-        System.out.println(B.getNom() + " a retiré 2 amis ");
+        System.out.println(B.getNom() + " " + B.getPrenom() + " a retiré 2 amis ");
         B.SuppAmis(G);
         B.SuppAmis(C);
 
         //on a affiche toute la liste après suppression
-        System.out.println("La liste de tous les amis de " + B.getNom() + " : ");
+        System.out.println("La liste de tous les amis de " + B.getNom() + " " + B.getPrenom() + " : ");
         B.AffichListAmis();
 
         //on affiche la liste des amis étrangers après suppressionb
         System.out.println("----------------------------------------------------------");
-        System.out.println("\nLa liste des Amis étrangers de " + B.getNom() + " : ");
+        System.out.println("\nLa liste des Amis étrangers de " + B.getNom() + " " + B.getPrenom() + " : ");
         B.AmisEtranger();
     }
 }
