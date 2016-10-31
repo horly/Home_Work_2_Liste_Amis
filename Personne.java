@@ -124,7 +124,7 @@ public class Personne
 
         Personne A = new Personne("Andelo Mata","Horly","Congolaise",23);
         Personne B = new Personne("Belabid","Ikram","Agérienne",19);
-        Personne C = new Personne("Amina","Djatou","Algérienne",19);
+        Personne C = new Personne("Amina","Djatou","Algérienne",20);
         Personne D = new Personne("Barma","Ali","Nigérien",22);
         Personne E = new Personne("Orlin","Makanga","Congolaise",23);
         Personne F = new Personne("Franc","Dubosc","Française",20);
